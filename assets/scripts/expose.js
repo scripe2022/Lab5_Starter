@@ -24,7 +24,8 @@ function init() {
     }
 
     const updateImage = () => {
-        imgElement[0].src = `./assets/images/${((selectElement.value == 'select') ? 'no-image' : selectElement.value)}.svg`;
+        const filename = (selectElement.value == 'select') ? 'no-image.png' : selectElement.value + '.svg';
+        imgElement[0].src = `./assets/images/${filename}`;
     }
 
     updateImage();
